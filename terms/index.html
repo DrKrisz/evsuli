@@ -4,37 +4,10 @@
   <!-- 1v design, GitHub Pages fixed paths -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Az oldal nem található." />
-  <title>404 | EVsuli</title>
+  <meta name="description" content="EVsuli ÁSZF mintaoldal." />
+  <title>ÁSZF | EVsuli</title>
   <link rel="icon" href="/evsuli/assets/img/evsuli-icon.png" />
   <link rel="stylesheet" href="/evsuli/assets/css/style.css" />
-
-<script>
-(function () {
-  var base = "/evsuli/";
-  var path = window.location.pathname;
-
-  if (!path.startsWith(base)) return;
-
-  var rest = path.slice(base.length);
-  var parts = rest.split("/").filter(Boolean);
-  var known = {
-    "login": base + "login/",
-    "register": base + "register/",
-    "regisztracio": base + "register/",
-    "privacy": base + "privacy/",
-    "terms": base + "terms/"
-  };
-
-  for (var i = 0; i < parts.length; i++) {
-    if (known[parts[i]]) {
-      if (path !== known[parts[i]]) window.location.replace(known[parts[i]]);
-      return;
-    }
-  }
-})();
-</script>
-
 </head>
 
 <body>
@@ -63,17 +36,16 @@
 </header>
 
 <main>
-  <section class="error-section">
+  <section class="legal-section">
     <div class="container">
-      <div class="error-box reveal">
-        <div class="error-code">404</div>
-        <span class="eyebrow">Page not found</span>
-        <h1>Ez az oldal nem található.</h1>
-        <p>Lehet, hogy rossz linkre kattintottál, vagy az oldal még nincs bekötve. Menj vissza a főoldalra, vagy lépj be a fiókodba.</p>
-        <div class="error-actions">
-          <a class="btn btn-primary" href="/evsuli/">Főoldal</a>
-          <a class="btn btn-soft" href="/evsuli/login/">Belépés</a>
-        </div>
+      <div class="legal-box reveal">
+        <span class="eyebrow">ÁSZF</span>
+        <h1>Felhasználási feltételek</h1>
+        <p>Ez egy minta ÁSZF oldal a statikus verzióhoz. Éles fizetés, WooCommerce vagy tagsági rendszer előtt pontosítani kell.</p>
+        <h2>Oktatási tartalom</h2>
+        <p>Az EVsuli célja oktatási segítség nyújtása egyéni vállalkozóknak.</p>
+        <h2>Felelősség</h2>
+        <p>Egyedi adózási vagy jogi helyzetben szakember bevonása ajánlott.</p>
       </div>
     </div>
   </section>

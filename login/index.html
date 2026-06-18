@@ -1,101 +1,107 @@
 <!DOCTYPE html>
 <html lang="hu">
 <head>
-  <!-- GitHub Pages project base path: /evsuli/ -->
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- 1v design, GitHub Pages fixed paths -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Belépés az EVsuli tananyagokhoz." />
   <title>Belépés | EVsuli</title>
-  <meta name="description" content="Belépés az EVsuli tananyagokhoz.">
-  <link rel="icon" href="/evsuli/assets/img/evsuli-icon.png">
-  <link rel="stylesheet" href="/evsuli/assets/css/style.css">
+  <link rel="icon" href="/evsuli/assets/img/evsuli-icon.png" />
+  <link rel="stylesheet" href="/evsuli/assets/css/style.css" />
 </head>
+
 <body>
 
-
-<header class="site-header">
-  <div class="container nav">
-    <a class="brand" href="/evsuli/" aria-label="EVsuli főoldal">
-      <span class="brand-mark">
-        <img src="/evsuli/assets/img/evsuli-icon.png" alt="" onerror="this.remove(); this.parentElement.textContent='EV';">
-      </span>
-      <span>EVsuli</span>
+<header class="nav">
+  <div class="container nav-inner">
+    <a class="brand" href="/evsuli/" aria-label="EVsuli kezdőlap">
+      <span class="logo">EV</span>
+      <span>EVsuli<small>Hogy a NAV ne legyen mumus</small></span>
     </a>
 
-    <button class="mobile-menu-btn" type="button" data-menu-toggle aria-expanded="false">Menü</button>
-
-    <nav class="nav-links" aria-label="Fő navigáció">
-      <a href="/evsuli/#kinek">Kinek segít?</a>
+    <nav class="nav-links" id="navLinks" aria-label="Fő navigáció">
+      <a href="/evsuli/#kinek">Kinek szól</a>
+      <a href="/evsuli/#tananyag">Tananyag</a>
       <a href="/evsuli/#csomagok">Csomagok</a>
       <a href="/evsuli/#hirek">Hírek</a>
       <a href="/evsuli/#gyik">GYIK</a>
     </nav>
 
     <div class="nav-actions">
-      <a class="btn" href="/evsuli/login/">Belépés</a>
-      <a class="btn btn-primary" href="/evsuli/register/">Regisztráció</a>
+      <a class="btn btn-soft" href="/evsuli/login/">Belépés</a>
+      <a class="btn btn-primary" href="/evsuli/register/">Csatlakozok</a>
+      <button class="menu-btn" id="menuBtn" aria-label="Menü megnyitása">☰</button>
     </div>
   </div>
 </header>
 
-<main class="auth-main">
-  <div class="container auth-grid">
-    <section class="auth-copy">
-      <span class="badge">Belépés</span>
-      <h1>Folytasd ott, ahol abbahagytad.</h1>
-      <p>Jelentkezz be az EVsuli fiókodba, nézd meg a leckéidet, és térj vissza a fontos vállalkozói teendőkhöz.</p>
-      <div class="auth-pills">
-        <span class="auth-pill">Rövid videók</span>
-        <span class="auth-pill">Érthető lépések</span>
-        <span class="auth-pill">EV fókusz</span>
+<main>
+  <section class="auth-section">
+    <div class="container auth-grid">
+      <div class="auth-copy reveal">
+        <span class="eyebrow">🔐 Belépés az EVsuli fiókodba</span>
+        <h1>Folytasd ott, ahol abbahagytad.</h1>
+        <p>Jelentkezz be, nézd meg a leckéidet, és térj vissza a fontos vállalkozói teendőkhöz.</p>
+
+        <div class="auth-points">
+          <div class="auth-point"><strong>Videós leckék</strong><span>Kattintásról kattintásra.</span></div>
+          <div class="auth-point"><strong>Határidők</strong><span>Fontos EV teendők egy helyen.</span></div>
+          <div class="auth-point"><strong>Frissítések</strong><span>2026 hírek és magyarázatok.</span></div>
+        </div>
       </div>
-    </section>
 
-    <section class="auth-card" aria-labelledby="login-title">
-      <h2 id="login-title">Belépés</h2>
-      <p class="lead">Add meg az e-mail címed és jelszavad.</p>
+      <div class="auth-card reveal">
+        <h2>Belépés</h2>
+        <p class="lead">Add meg az e-mail címed és jelszavad.</p>
 
-      <form class="form" data-demo-form>
-        <div class="alert" role="status"></div>
+        <form class="form" data-demo-form>
+          <div class="alert" role="status"></div>
 
-        <div class="field">
-          <label for="email">E-mail cím</label>
-          <input class="input" id="email" name="email" type="email" autocomplete="email" placeholder="pelda@email.hu" required>
-        </div>
-
-        <div class="field">
-          <label for="password">Jelszó</label>
-          <div class="input-wrap">
-            <input class="input has-toggle" id="password" name="password" type="password" autocomplete="current-password" placeholder="Add meg a jelszavad" required>
-            <button class="password-toggle" type="button" data-password-toggle>Mutat</button>
+          <div class="field">
+            <label for="email">E-mail cím</label>
+            <input class="input" id="email" name="email" type="email" autocomplete="email" placeholder="pelda@email.hu" required />
           </div>
-        </div>
 
-        <div class="form-row">
-          <label class="checkbox">
-            <input type="checkbox" name="remember">
-            <span>Emlékezz rám</span>
-          </label>
-          <a class="link" href="#">Elfelejtett jelszó?</a>
-        </div>
+          <div class="field">
+            <label for="password">Jelszó</label>
+            <div class="input-wrap">
+              <input class="input has-toggle" id="password" name="password" type="password" autocomplete="current-password" placeholder="Add meg a jelszavad" required />
+              <button class="password-toggle" type="button" data-password-toggle>Mutat</button>
+            </div>
+          </div>
 
-        <button class="btn btn-primary full" type="submit">Belépek</button>
+          <div class="form-row">
+            <label class="checkbox">
+              <input type="checkbox" name="remember" />
+              <span>Emlékezz rám</span>
+            </label>
+            <a class="link" href="#">Elfelejtett jelszó?</a>
+          </div>
 
-        <div class="divider">vagy</div>
+          <button class="btn btn-primary" type="submit">Belépek</button>
 
-        <a class="btn full" href="/evsuli/register/">Új fiókot hozok létre</a>
-      </form>
-    </section>
-  </div>
+          <div class="divider">vagy</div>
+          <a class="btn btn-soft" href="/evsuli/register/">Új fiókot hozok létre</a>
+        </form>
+      </div>
+    </div>
+  </section>
 </main>
 
-<footer class="footer">
-  <div class="container footer-inner">
-    <p>© 2026 EVsuli. Hogy a NAV ne legyen mumus.</p>
-    <p><a class="link" href="/evsuli/">Vissza a főoldalra</a></p>
+<footer>
+  <div class="container footer-grid">
+    <div class="brand">
+      <span class="logo">EV</span>
+      <span>EVsuli<small>Hogy a NAV ne legyen mumus</small></span>
+    </div>
+    <div class="footer-links">
+      <a href="/evsuli/privacy/">Adatvédelem</a>
+      <a href="/evsuli/terms/">ÁSZF</a>
+      <a href="/evsuli/#rolunk">Kapcsolat</a>
+    </div>
   </div>
 </footer>
 <script src="/evsuli/assets/js/main.js"></script>
-
 
 </body>
 </html>

@@ -1,179 +1,260 @@
 <!DOCTYPE html>
+
 <html lang="hu">
-<head>
-  <!-- GitHub Pages project base path: /evsuli/ -->
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>EVsuli | Hogy a NAV ne legyen mumus</title>
-  <meta name="description" content="EVsuli modern főoldal egyéni vállalkozóknak.">
-  <link rel="icon" href="/evsuli/assets/img/evsuli-icon.png">
-  <link rel="stylesheet" href="/evsuli/assets/css/style.css">
-</head>
+<head> 1v design, GitHub Pages fixed paths 
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="EVsuli, gyakorlati online segítség egyéni vállalkozóknak, hogy a NAV ne legyen mumus." name="description"/>
+<title>EVsuli | Hogy a NAV ne legyen mumus</title>
+
+<link href="/evsuli/assets/img/evsuli-icon.png" rel="icon"/><link href="/evsuli/assets/css/style.css" rel="stylesheet"/></head>
 <body>
-
-
-<header class="site-header">
-  <div class="container nav">
-    <a class="brand" href="/evsuli/" aria-label="EVsuli főoldal">
-      <span class="brand-mark">
-        <img src="/evsuli/assets/img/evsuli-icon.png" alt="" onerror="this.remove(); this.parentElement.textContent='EV';">
-      </span>
-      <span>EVsuli</span>
-    </a>
-
-    <button class="mobile-menu-btn" type="button" data-menu-toggle aria-expanded="false">Menü</button>
-
-    <nav class="nav-links" aria-label="Fő navigáció">
-      <a href="/evsuli/#kinek">Kinek segít?</a>
-      <a href="/evsuli/#csomagok">Csomagok</a>
-      <a href="/evsuli/#hirek">Hírek</a>
-      <a href="/evsuli/#gyik">GYIK</a>
-    </nav>
-
-    <div class="nav-actions">
-      <a class="btn" href="/evsuli/login/">Belépés</a>
-      <a class="btn btn-primary" href="/evsuli/register/">Regisztráció</a>
-    </div>
-  </div>
+<header class="nav">
+<div class="container nav-inner">
+<a aria-label="EVsuli kezdőlap" class="brand" href="/evsuli/#top">
+<span class="logo">EV</span>
+<span>EVsuli<small>Hogy a NAV ne legyen mumus</small></span>
+</a>
+<nav aria-label="Fő navigáció" class="nav-links" id="navLinks">
+<a href="/evsuli/#kinek">Kinek szól</a>
+<a href="/evsuli/#tananyag">Tananyag</a>
+<a href="/evsuli/#csomagok">Csomagok</a>
+<a href="/evsuli/#hirek">Hírek</a>
+<a href="/evsuli/#gyik">GYIK</a>
+</nav>
+<div class="nav-actions">
+<a class="btn btn-soft" href="/evsuli/login/">Belépés</a>
+<a class="btn btn-primary" href="/evsuli/register/">Csatlakozok</a>
+<button aria-label="Menü megnyitása" class="menu-btn" id="menuBtn">☰</button>
+</div>
+</div>
 </header>
-
-<main>
-  <section class="hero">
-    <div class="container hero-grid">
-      <div class="hero-copy">
-        <span class="badge">Hogy a NAV ne legyen mumus</span>
-        <h1>Könyvelj magadnak magabiztosan.</h1>
-        <p>Érthető, lépésről lépésre követhető videók számlázáshoz, adózáshoz, járulékokhoz és határidőkhöz. Láthatóbb pénzügyek, kevesebb stressz, több kontroll a saját vállalkozásod felett.</p>
-        <div class="hero-actions">
-          <a class="btn btn-primary" href="/evsuli/register/">Kezdés most</a>
-          <a class="btn" href="/evsuli/login/">Már van fiókom</a>
-        </div>
-      </div>
-
-      <div class="preview-card" aria-label="EVsuli felület előnézet">
-        <div class="mock-window">
-          <div class="mock-top">
-            <span class="dot"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
-          </div>
-          <div class="mock-body">
-            <div class="mock-line short"></div>
-            <div class="mock-line"></div>
-            <div class="mock-line green"></div>
-            <div class="mock-line"></div>
-            <div class="mock-line short green"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" id="kinek">
-    <div class="container">
-      <div class="section-title">
-        <h2>Kinek segít az EVsuli?</h2>
-        <p>Az oldal azoknak készült, akik szeretnék jobban érteni a saját vállalkozásuk pénzügyi és adminisztrációs oldalát.</p>
-      </div>
-
-      <div class="cards">
-        <article class="card">
-          <h3>Kezdő EV vagy</h3>
-          <p>Megtanulod, milyen alaplépések kellenek induláskor, és hogyan gondolkodj számlázásról, adózásról és határidőkről.</p>
-        </article>
-        <article class="card">
-          <h3>Magadnak könyvelnél</h3>
-          <p>Gyakorlati videókkal látod, mit, mikor és hol kell intézni, így kevesebb pénz megy el külső segítségre.</p>
-        </article>
-        <article class="card">
-          <h3>Tisztábban látnád a pénzed</h3>
-          <p>Átláthatóbb bevételek, költségek és kötelezettségek. Könnyebb döntések a vállalkozásodban.</p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" id="csomagok">
-    <div class="container">
-      <div class="section-title">
-        <h2>Csomagok, amiket könnyű érteni.</h2>
-        <p>A struktúra készen áll. Később WooCommerce termékekhez vagy saját fizetési rendszerhez lehet kötni.</p>
-      </div>
-
-      <div class="cards">
-        <article class="card">
-          <h3>Starter</h3>
-          <p>Alap induló anyagok kezdő vállalkozóknak.</p>
-        </article>
-        <article class="card">
-          <h3>Tudatos EV</h3>
-          <p>Teljesebb tananyag számlázáshoz, járulékokhoz és határidőkhöz.</p>
-        </article>
-        <article class="card">
-          <h3>Mentor</h3>
-          <p>Prémium csomag későbbi személyes vagy csoportos támogatáshoz.</p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" id="hirek">
-    <div class="container">
-      <div class="section-title">
-        <h2>Friss EV hírek és magyarázatok.</h2>
-        <p>Egyszerűbb nyelven megírt összefoglalók vállalkozóknak.</p>
-      </div>
-
-      <div class="cards">
-        <article class="card">
-          <h3>Bérek és Járulékok 2026</h3>
-          <p>Fontos változások röviden, érthetően.</p>
-        </article>
-        <article class="card">
-          <h3>SZJA változások 2026</h3>
-          <p>Mi változik, mire figyelj, milyen határidőket ne hagyj ki.</p>
-        </article>
-        <article class="card">
-          <h3>NAV határidők</h3>
-          <p>Egy helyen a fontosabb vállalkozói teendők.</p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" id="gyik">
-    <div class="container">
-      <div class="section-title">
-        <h2>Gyakori kérdések.</h2>
-        <p>Rövid válaszok azokhoz a kérdésekhez, amik egy új látogató fejében először megjelennek.</p>
-      </div>
-
-      <div class="cards">
-        <article class="card">
-          <h3>Kezdőként is érthető?</h3>
-          <p>Igen. A cél, hogy kezdő vállalkozóként is követni tudd a folyamatokat.</p>
-        </article>
-        <article class="card">
-          <h3>Kiváltja a könyvelőt?</h3>
-          <p>Oktatóanyag. Komolyabb vagy egyedi ügyeknél szakember bevonása hasznos lehet.</p>
-        </article>
-        <article class="card">
-          <h3>Frissülnek a hírek?</h3>
-          <p>Igen, erre külön hírek szekció készült.</p>
-        </article>
-      </div>
-    </div>
-  </section>
+<main id="top">
+<section class="hero">
+<div class="container hero-grid">
+<div class="reveal">
+<span class="eyebrow">📚 Gyakorlati online suli egyéni vállalkozóknak</span>
+<h1>Könyvelj magadnak magabiztosan.</h1>
+<p>Érthető, lépésről lépésre követhető videók számlázáshoz, adózáshoz, járulékokhoz és határidőkhöz. Láthatóbb pénzügyek, kevesebb stressz, több kontroll a saját vállalkozásod felett.</p>
+<div class="hero-actions">
+<a class="btn btn-primary" href="/evsuli/register/">Elkezdem a tanulást</a>
+<a class="btn btn-soft" href="/evsuli/#csomagok">Megnézem a csomagokat</a>
+</div>
+<div aria-label="EVsuli előnyök" class="hero-proof">
+<div class="proof-card"><strong>Videós leckék</strong><span>Kattintásról kattintásra</span></div>
+<div class="proof-card"><strong>2026 frissítések</strong><span>Bérek, járulékok, SZJA</span></div>
+<div class="proof-card"><strong>EV fókusz</strong><span>Egyszerű nyelven magyarázva</span></div>
+</div>
+</div>
+<div aria-label="EVsuli tanulási irányítópult illusztráció" class="visual-card reveal">
+<div class="mock-top">
+<div class="mock-dots"><span></span><span></span><span></span></div>
+<strong>EVsuli dashboard</strong>
+</div>
+<div class="mock-panel">
+<h3>Mai teendők</h3>
+<p>A fontos vállalkozói feladatokat egyben látod, érthető magyarázattal.</p>
+<div class="todo-list">
+<div class="todo"><div><strong>Számla ellenőrzése</strong><br/><span>Mi kerüljön rá, mire figyelj</span></div><span class="check">✓</span></div>
+<div class="todo"><div><strong>Járulék befizetés</strong><br/><span>Határidő és lépések</span></div><span class="check">✓</span></div>
+<div class="todo"><div><strong>SZJA változások 2026</strong><br/><span>Rövid összefoglaló</span></div><span class="check">✓</span></div>
+</div>
+</div>
+<div class="floating-note">
+<strong>“Hogy a NAV ne legyen mumus!”</strong>
+<span>Egyszerű magyarázatok kezdő vállalkozóknak, felesleges szakzsargon nélkül.</span>
+</div>
+</div>
+</div>
+</section>
+<section id="kinek">
+<div class="container">
+<div class="section-head reveal">
+<h2>Kinek segít az EVsuli?</h2>
+<p>Az oldal azoknak készült, akik szeretnék jobban érteni a saját vállalkozásuk pénzügyi és adminisztrációs oldalát.</p>
+</div>
+<div class="grid-3">
+<article class="card reveal">
+<div class="icon">🚀</div>
+<h3>Kezdő EV vagy</h3>
+<p>Megtanulod, milyen alaplépések kellenek induláskor, hogyan gondolkodj számlázásról, adózásról és határidőkről.</p>
+</article>
+<article class="card reveal">
+<div class="icon">🧾</div>
+<h3>Magadnak könyvelnél</h3>
+<p>Gyakorlati videókkal látod, mit, mikor és hol kell intézni, így kevesebb pénz megy el külső segítségre.</p>
+</article>
+<article class="card reveal">
+<div class="icon">📈</div>
+<h3>Tisztábban látnád a pénzed</h3>
+<p>Átláthatóbb bevételek, költségek és kötelezettségek. Könnyebb döntések a vállalkozásodban.</p>
+</article>
+</div>
+</div>
+</section>
+<section id="tananyag">
+<div class="container split">
+<div class="big-panel reveal">
+<div>
+<span class="eyebrow">Tanulási út</span>
+<h2>Videók, sablonok, hírek és gyakorlati példák egy helyen.</h2>
+</div>
+<p>A cél egyszerű: ne érezd magad elveszettnek, amikor számlát kell kiállítani, járulékot kell fizetni, vagy változik egy adószabály.</p>
+</div>
+<div class="steps">
+<article class="step reveal">
+<div class="number">01</div>
+<div><h3>Válaszd ki a témát</h3><p>Számlázás, adózás, járulékok, határidők, bevallások és alap vállalkozói adminisztráció.</p></div>
+</article>
+<article class="step reveal">
+<div class="number">02</div>
+<div><h3>Nézd meg a rövid videót</h3><p>A leckék egyszerűen követhetőek, konkrét képernyőkkel és magyarázatokkal.</p></div>
+</article>
+<article class="step reveal">
+<div class="number">03</div>
+<div><h3>Használd a listát</h3><p>Ellenőrző pontok segítenek, hogy ne maradjon ki fontos feladat.</p></div>
+</article>
+<article class="step reveal">
+<div class="number">04</div>
+<div><h3>Térj vissza frissítésekért</h3><p>A hírek és összefoglalók segítenek követni a fontosabb változásokat.</p></div>
+</article>
+</div>
+</div>
+</section>
+<section id="csomagok">
+<div class="container">
+<div class="section-head reveal">
+<h2>Csomagok, amiket könnyű érteni.</h2>
+<p>A pontos árakat és tartalmakat később lehet kötni a WooCommerce termékekhez. A struktúra már készen áll.</p>
+</div>
+<div class="pricing">
+<article class="price-card reveal">
+<span class="pill">Kezdéshez</span>
+<h3>Starter</h3>
+<div class="price">Alap</div>
+<span class="price-note">Induló egyéni vállalkozóknak</span>
+<ul class="clean">
+<li>Alap számlázási leckék</li>
+<li>Határidő ellenőrző lista</li>
+<li>Kezdő vállalkozói magyarázatok</li>
+</ul>
+<a class="btn btn-soft" href="/evsuli/#csomagok">Részletek</a>
+</article>
+<article class="price-card featured reveal">
+<span class="pill">Legnépszerűbb</span>
+<h3>Tudatos EV</h3>
+<div class="price">Teljes</div>
+<span class="price-note">A fő tananyag egy helyen</span>
+<ul class="clean">
+<li>Részletes videós tananyag</li>
+<li>Bérek és járulékok frissítések</li>
+<li>SZJA változás összefoglalók</li>
+<li>Gyakorlati példák és listák</li>
+</ul>
+<a class="btn btn-primary" href="/evsuli/register/">Csatlakozok</a>
+</article>
+<article class="price-card reveal">
+<span class="pill">Haladóknak</span>
+<h3>Mentor</h3>
+<div class="price">Prémium</div>
+<span class="price-note">Több támogatást kérőknek</span>
+<ul class="clean">
+<li>Teljes tananyag hozzáférés</li>
+<li>Kiemelt magyarázatok</li>
+<li>Kérdésgyűjtő és extra anyagok</li>
+</ul>
+<a class="btn btn-soft" href="/evsuli/#rolunk">Érdeklődöm</a>
+</article>
+</div>
+</div>
+</section>
+<section id="hirek">
+<div class="container">
+<div class="section-head reveal">
+<h2>Friss EV hírek és magyarázatok.</h2>
+<p>A hírlap rész segít követni a vállalkozókat érintő változásokat, egyszerűbb nyelven.</p>
+</div>
+<div class="article-grid">
+<article class="article reveal">
+<div>
+<time datetime="2026-06-17">2026. június 17.</time>
+<h3>Bérek és Járulékok 2026</h3>
+</div>
+<a class="btn btn-soft" href="/evsuli/#hirek">Elolvasom</a>
+</article>
+<article class="article reveal">
+<div>
+<time datetime="2026-06-17">2026. június 17.</time>
+<h3>SZJA változások 2026</h3>
+</div>
+<a class="btn btn-soft" href="/evsuli/#hirek">Elolvasom</a>
+</article>
+</div>
+</div>
+</section>
+<section id="rolunk">
+<div class="container about-card reveal">
+<div aria-hidden="true" class="portrait">👩‍💼</div>
+<div class="about-content">
+<span class="eyebrow">Rólunk</span>
+<h2>Zubor Anna Krisztina</h2>
+<p><strong>Ügyvezető, pénzügyi számviteles.</strong></p>
+<p>Az EVsuli célja, hogy az egyéni vállalkozók érthető, gyakorlati és követhető segítséget kapjanak a mindennapi adminisztrációhoz. A fókusz a valós lépéseken van, nem a túlbonyolított magyarázatokon.</p>
+<p>A tananyag segít abban, hogy jobban átlásd a vállalkozásod pénzügyeit, és magabiztosabban intézd a saját kötelezettségeidet.</p>
+<a class="btn btn-primary" href="/evsuli/#rolunk">Többet a csapatról</a>
+</div>
+</div>
+</section>
+<section id="gyik">
+<div class="container">
+<div class="section-head reveal">
+<h2>Gyakori kérdések.</h2>
+<p>Rövid válaszok azokhoz a kérdésekhez, amik egy új látogató fejében először megjelennek.</p>
+</div>
+<div class="faq">
+<details class="reveal">
+<summary>Kezdőként is érteni fogom?</summary>
+<p>Igen. A leírások és videók célja, hogy kezdő vállalkozóként is követni tudd a folyamatokat.</p>
+</details>
+<details class="reveal">
+<summary>Ez könyvelő helyett van?</summary>
+<p>Az EVsuli oktatóanyag. Segít megérteni és elvégezni alap feladatokat. Komolyabb vagy egyedi ügyeknél szakember bevonása továbbra is hasznos lehet.</p>
+</details>
+<details class="reveal">
+<summary>Lesznek 2026-os frissítések?</summary>
+<p>Igen. A hírek között már megjelenik a Bérek és Járulékok 2026, valamint az SZJA változások 2026 téma.</p>
+</details>
+<details class="reveal">
+<summary>Hol tudok csatlakozni?</summary>
+<p>A regisztrációs gomb a meglévő EVsuli regisztrációs oldalra mutat, így WordPress alatt is könnyen beköthető.</p>
+</details>
+</div>
+</div>
+</section>
+<section class="cta">
+<div class="container cta-box reveal">
+<div>
+<h2>Készen állsz érthetőbbé tenni a vállalkozásod pénzügyeit?</h2>
+<p>Csatlakozz az EVsulihoz, és tanuld meg a fontos adminisztrációs lépéseket egyszerű, gyakorlatias videókkal.</p>
+</div>
+<a class="btn btn-primary" href="/evsuli/register/">Csatlakozok</a>
+</div>
+</section>
 </main>
-
-<footer class="footer">
-  <div class="container footer-inner">
-    <p>© 2026 EVsuli. Hogy a NAV ne legyen mumus.</p>
-    <p><a class="link" href="/evsuli/">Vissza a főoldalra</a></p>
-  </div>
+<footer>
+<div class="container footer-grid">
+<div class="brand">
+<span class="logo">EV</span>
+<span>EVsuli<small>Hogy a NAV ne legyen mumus</small></span>
+</div>
+<div class="footer-links">
+<a href="/evsuli/privacy/">Adatvédelem</a>
+<a href="/evsuli/terms/">ÁSZF</a>
+<a href="/evsuli/#rolunk">Kapcsolat</a>
+<a href="https://facebook.com" rel="noopener">Facebook</a>
+</div>
+</div>
 </footer>
-<script src="/evsuli/assets/js/main.js"></script>
 
-
-</body>
+<script src="/evsuli/assets/js/main.js"></script></body>
 </html>

@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="hu">
 <head>
-  <!-- GitHub Pages project base path: /evsuli/ -->
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- 1v design, GitHub Pages fixed paths -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Az oldal nem található." />
   <title>404 | EVsuli</title>
-  <meta name="description" content="Az oldal nem található.">
-  <link rel="icon" href="/evsuli/assets/img/evsuli-icon.png">
-  <link rel="stylesheet" href="/evsuli/assets/css/style.css">
+  <link rel="icon" href="/evsuli/assets/img/evsuli-icon.png" />
+  <link rel="stylesheet" href="/evsuli/assets/css/style.css" />
 
 <script>
 (function () {
@@ -18,14 +18,17 @@
 
   var rest = path.slice(base.length);
   var parts = rest.split("/").filter(Boolean);
-  var known = ["login", "register", "404"];
+  var known = {
+    "login": base + "login/",
+    "register": base + "register/",
+    "regisztracio": base + "register/",
+    "privacy": base + "privacy/",
+    "terms": base + "terms/"
+  };
 
   for (var i = 0; i < parts.length; i++) {
-    if (known.indexOf(parts[i]) !== -1) {
-      var target = base + parts[i] + "/";
-      if (path !== target) {
-        window.location.replace(target);
-      }
+    if (known[parts[i]]) {
+      if (path !== known[parts[i]]) window.location.replace(known[parts[i]]);
       return;
     }
   }
@@ -33,57 +36,63 @@
 </script>
 
 </head>
+
 <body>
 
-
-<header class="site-header">
-  <div class="container nav">
-    <a class="brand" href="/evsuli/" aria-label="EVsuli főoldal">
-      <span class="brand-mark">
-        <img src="/evsuli/assets/img/evsuli-icon.png" alt="" onerror="this.remove(); this.parentElement.textContent='EV';">
-      </span>
-      <span>EVsuli</span>
+<header class="nav">
+  <div class="container nav-inner">
+    <a class="brand" href="/evsuli/" aria-label="EVsuli kezdőlap">
+      <span class="logo">EV</span>
+      <span>EVsuli<small>Hogy a NAV ne legyen mumus</small></span>
     </a>
 
-    <button class="mobile-menu-btn" type="button" data-menu-toggle aria-expanded="false">Menü</button>
-
-    <nav class="nav-links" aria-label="Fő navigáció">
-      <a href="/evsuli/#kinek">Kinek segít?</a>
+    <nav class="nav-links" id="navLinks" aria-label="Fő navigáció">
+      <a href="/evsuli/#kinek">Kinek szól</a>
+      <a href="/evsuli/#tananyag">Tananyag</a>
       <a href="/evsuli/#csomagok">Csomagok</a>
       <a href="/evsuli/#hirek">Hírek</a>
       <a href="/evsuli/#gyik">GYIK</a>
     </nav>
 
     <div class="nav-actions">
-      <a class="btn" href="/evsuli/login/">Belépés</a>
-      <a class="btn btn-primary" href="/evsuli/register/">Regisztráció</a>
+      <a class="btn btn-soft" href="/evsuli/login/">Belépés</a>
+      <a class="btn btn-primary" href="/evsuli/register/">Csatlakozok</a>
+      <button class="menu-btn" id="menuBtn" aria-label="Menü megnyitása">☰</button>
     </div>
   </div>
 </header>
 
-<main class="notfound">
-  <div class="container">
-    <section class="notfound-card">
-      <div class="error-code">404</div>
-      <span class="badge">Page not found</span>
-      <h1>Ez az oldal nem található.</h1>
-      <p>Lehet, hogy rossz linkre kattintottál, vagy az oldal még nincs bekötve. Menj vissza a főoldalra, vagy lépj be a fiókodba.</p>
-      <div class="hero-actions" style="justify-content:center;">
-        <a class="btn btn-primary" href="/evsuli/">Főoldal</a>
-        <a class="btn" href="/evsuli/login/">Belépés</a>
+<main>
+  <section class="error-section">
+    <div class="container">
+      <div class="error-box reveal">
+        <div class="error-code">404</div>
+        <span class="eyebrow">Page not found</span>
+        <h1>Ez az oldal nem található.</h1>
+        <p>Lehet, hogy rossz linkre kattintottál, vagy az oldal még nincs bekötve. Menj vissza a főoldalra, vagy lépj be a fiókodba.</p>
+        <div class="error-actions">
+          <a class="btn btn-primary" href="/evsuli/">Főoldal</a>
+          <a class="btn btn-soft" href="/evsuli/login/">Belépés</a>
+        </div>
       </div>
-    </section>
-  </div>
+    </div>
+  </section>
 </main>
 
-<footer class="footer">
-  <div class="container footer-inner">
-    <p>© 2026 EVsuli. Hogy a NAV ne legyen mumus.</p>
-    <p><a class="link" href="/evsuli/">Vissza a főoldalra</a></p>
+<footer>
+  <div class="container footer-grid">
+    <div class="brand">
+      <span class="logo">EV</span>
+      <span>EVsuli<small>Hogy a NAV ne legyen mumus</small></span>
+    </div>
+    <div class="footer-links">
+      <a href="/evsuli/privacy/">Adatvédelem</a>
+      <a href="/evsuli/terms/">ÁSZF</a>
+      <a href="/evsuli/#rolunk">Kapcsolat</a>
+    </div>
   </div>
 </footer>
 <script src="/evsuli/assets/js/main.js"></script>
-
 
 </body>
 </html>
